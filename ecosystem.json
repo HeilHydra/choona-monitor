@@ -7,7 +7,7 @@
   "deploy" : {
     "production" : {
       "user" : "root",
-      "host" : "46.101.12.50",
+      "host" : "choona.net",
       "ref"  : "origin/master",
       "repo" : "git@github.com:HeilHydra/choona-monitor.git",
       "path" : "/var/www/choona-monitor/production",
@@ -15,7 +15,7 @@
     },
     "staging" : {
       "user" : "root",
-      "host" : "46.101.12.50",
+      "host" : "choona.net",
       "ref"  : "origin/staging",
       "repo" : "git@github.com:HeilHydra/choona-monitor.git",
       "path" : "/var/www/choona-monitor/staging",
