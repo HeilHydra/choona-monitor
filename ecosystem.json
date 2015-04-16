@@ -11,7 +11,7 @@
       "ref"  : "origin/master",
       "repo" : "git@github.com:HeilHydra/choona-monitor.git",
       "path" : "/var/www/choona-monitor/production",
-      "post-deploy" : "npm install && pm2 startOrRestart --env production"
+      "post-deploy" : "npm install && pm2 startOrRestart ecosystem.json --env production"
     },
     "staging" : {
       "user" : "root",
@@ -19,7 +19,7 @@
       "ref"  : "origin/staging",
       "repo" : "git@github.com:HeilHydra/choona-monitor.git",
       "path" : "/var/www/choona-monitor/staging",
-      "post-deploy" : "npm install && pm2 startOrRestart --env staging"
+      "post-deploy" : "npm install && pm2 startOrRestart ecosystem.json --env staging"
     }
   }
 }
