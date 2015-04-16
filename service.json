@@ -18,7 +18,7 @@
       "host" : "46.101.12.50",
       "ref"  : "origin/staging",
       "repo" : "git@github.com:HeilHydra/choona-monitor.git",
-      "path" : "/var/www/choona-monitor/development",
+      "path" : "/var/www/choona-monitor/staging",
       "post-deploy" : "pm2 startOrRestart service.json --env staging"
     }
   }
