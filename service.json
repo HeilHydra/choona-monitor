@@ -1,0 +1,25 @@
+{
+  "apps" : [{
+    "name": "choona-monitor",
+    "script": "service.js"
+  }],
+
+  "deploy" : {
+    "production" : {
+      "user" : "root",
+      "host" : "46.101.12.50",
+      "ref"  : "origin/master",
+      "repo" : "git@github.com:HeilHydra/choona-monitor.git",
+      "path" : "/var/www/choona-monitor/production",
+      "post-deploy" : "pm2 startOrRestart service.json --env production"
+    },
+    "staging" : {
+      "user" : "root",
+      "host" : "46.101.12.50",
+      "ref"  : "origin/staging",
+      "repo" : "git@github.com:HeilHydra/choona-monitor.git",
+      "path" : "/var/www/choona-monitor/development",
+      "post-deploy" : "pm2 startOrRestart service.json --env staging"
+    }
+  }
+}
