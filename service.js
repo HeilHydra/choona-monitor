@@ -1,7 +1,8 @@
 var NRP = require("node-redis-pubsub");
-var colors = require('colors');
+var colors = require("colors");
+var config = require("config");
 
-var nrp = new NRP();
+var nrp = new NRP(config.redis);
 
 nrp.on("*", function (payload, key) {
   key = key.split(":").map(function (part) {
