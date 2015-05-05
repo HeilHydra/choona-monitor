@@ -12,7 +12,7 @@ nrp.on("*", function (payload, key) {
     return "*";
   }).join(":");
 
-  if (!/stream:[^:]+?:data/.test(key.toString())) {
+  if (!/stream:[^:]+?:(data|writebeat|readbeat)/.test(key.toString())) {
     console.log("Key:".yellow.bold, key, "\tPayload:".yellow.bold, payload);
   }
 });
